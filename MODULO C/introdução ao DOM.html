@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 name="primeiroH1">/</h1>
+    <p id="primeiroParagrafo">/</p>
+    <p class="segundoParagrafo">/</p>
+    <div>/</div>
+    <section class="testSection"></section>
+    <script>
+        /* HTML */
+        document.getElementsByName('primeiroH1')[0].innerText = 'Iniciando estudos com DOM'
+        document.getElementById('primeiroParagrafo').innerText = 'Tudo nesse exercício foi feito usando o DOM'
+        document.getElementsByClassName('segundoParagrafo')[0].innerText = 'Estou usando o DOM'
+        document.getElementsByTagName('div')[0].innerHTML = 'Neste eu usei <strong>innerHTML</strong>'
+        document.querySelector('section.testSection').innerText = 'Esse eu usei o querySelector'
+
+        /* Estilo */
+        document.body.style = 'background: LightGray; font-size: 1.4em'
+        document.querySelector('section.testSection').style = 'margin-top: 30px;'
+    </script>
+</body>
+</html>
