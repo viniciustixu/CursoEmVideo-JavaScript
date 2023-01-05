@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com EventListener</title>
+</head>
+<body>
+    <h1 id="titulo_1">titulo1</h1>
+    <h1 id="titulo_2">titulo2</h1>
+
+    <input type="button" value="adicionar função" id="adicionar">
+    <input type="button" value="Executar função" id="executar">
+    <input type="button" value="Limpar função" id="limpar">
+</body>
+<script>
+    document.getElementById('adicionar').addEventListener('click', clicouAdicionar) // importando eventListener 'click' e gerando clicouAdicionar()
+    document.getElementById('limpar').addEventListener('click', limpou)
+
+    function clicouAdicionar() { //Adicionando funções ao executar
+        let e = document.getElementById('executar')
+        e.addEventListener('click', executar_1)
+        e.addEventListener('click', executar_2)
+    }
+
+    function executar_1() { //função adicionada 1
+        let agora = new Date()
+        document.getElementById('titulo_1').textContent = agora.getSeconds()
+    }
+
+    function executar_2() { //função adicionada 2
+        let agora = new Date()
+        document.getElementById('titulo_2').textContent = agora.getSeconds()
+    }
+
+    function limpou() { //Removendo apenas uma das duas funções
+        let e = document.getElementById('executar')
+        e.removeEventListener('click', executar_1)
+    }
+
+</script>
+</html>
