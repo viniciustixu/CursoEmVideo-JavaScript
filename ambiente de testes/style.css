@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+body {
+    background: #E6A87C;
+}
+
+/* seletor pokemon */
+
+#h1-temporario {
+    display: none; /* só apagar */
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 90px;
+}
+
+.container {
+    display: none; /* flex */
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.pokemon-quadro {
+    max-width: calc(33.333% - 10px);
+    border-radius: 30px;
+    margin: 0 5px;
+}
+
+.pokemon-quadro:hover {
+    background-color: green;
+    zoom: 140%;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.pokemon-quadro > h2 {
+    max-width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    margin: 20px 0 10px 0;
+}
+
+.pokemon-quadro > img {
+    max-width: 100%;
+}
+
+/* combate */
+
+#combate {
+    display: flex;
+    height: 99.7vh;
+    width: 99.8535%;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-2 {
+    position: relative;
+    margin: 0 auto;
+    background: url(../imagens/background-pokemon.jpg)no-repeat center center;
+    background-size: cover;
+    width: 80%;
+    height: 500px;
+    border: 2px solid black;
+}
+
+#pokemon-back-combat {
+    position: absolute;
+    bottom: -1%;
+    left: 0%;
+    width: 30%;
+}
+
+.pokemon-de-costas {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.mewtwo-container {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 10%;
+}
+
+.mewtwo-inimigo {
+    display: none;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width: 480px) {
+    .pokemon-quadro > h2 {
+        font-size: 1.1em;
+    }
+
+    .pokemon-quadro:hover {
+        font-size: 0.6em;
+    }
+
+    #h1-temporario {
+        font-size: 2em;
+    }
+}
