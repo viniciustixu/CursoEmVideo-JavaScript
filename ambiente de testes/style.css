@@ -51,6 +51,10 @@ body {
     max-width: 100%;
 }
 
+.pokemon-de-costas img {
+    content: url(../imagens/squirtle.png);
+}
+
 /* combate */
 
 #combate {
@@ -86,17 +90,19 @@ body {
 
 .mewtwo-container {
     position: absolute;
-    top: 20%;
-    left: 55%;
+    bottom: 33%;
+    right: 23%;
+    width: 30%;
+    max-width: 260px;
 }
 
 .mewtwo-inimigo {
-    width: 200px;
+    width: 100%;
 }
 
 audio {
     height: 20px;
-    width: 300px;
+    width: 30%;
 }
 
 
