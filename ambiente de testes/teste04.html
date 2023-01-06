@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 id="h1-temporario">Escolha seu Pokemon!</h1>
-    <div class="container">
+    <div class="container"> <!--Escolha do pokemon-->
         <div class="pokemon-quadro">
             <h2>Charmander</h2>
             <img src="../imagens/charmander.png" alt="imagem charmander">
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div id="combate">
+    <div id="combate"> <!--combate-->
         <div id="container-2">
             <div id="pokemon-back-combat">
                 <img src="../imagens/bulbasaur-back.png" alt="Pokemon back" class="pokemon-de-costas">
@@ -35,8 +35,18 @@
             <div>
                 <audio src="../musicas/batalha.mp3" controls>Seu navegador não é compatível com a musica</audio>
             </div>
+            <nav class="UI">
+                <ul>
+                    <li id="atk">Ataque</li>
+                    <li id="def">curar</li>
+                </ul>
+            </nav>
         </div>
     </div>
+
+    <audio id="musicaCombate"> <!--Musicas-->
+        <source src="../musicas/batalha.mp3" type="audio/mp3">
+      </audio>
 
 </body>
 <script src="teste04.js"></script>

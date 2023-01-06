@@ -71,7 +71,7 @@ body {
     background: url(../imagens/background-pokemon.jpg)no-repeat center center;
     background-size: cover;
     width: 80%;
-    height: 500px;
+    height: 600px;
     border: 2px solid black;
 }
 
@@ -103,6 +103,39 @@ body {
 audio {
     height: 20px;
     width: 30%;
+}
+
+.UI {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    max-width: 50%;
+}
+
+.UI > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.UI > ul > li {
+    display: flex;
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #E09828 60%, #886838);
+    color: white;
+    font-size: 1.4em;
+    text-shadow: 1px 2px 3px black;
+    cursor: pointer;
+}
+
+.UI > ul > li:nth-child(2) {
+    background: linear-gradient(to bottom, #58B028 60%, #507040);
 }
 
 
