@@ -15,14 +15,14 @@ body {
 /* seletor pokemon */
 
 #h1-temporario {
-    display: none; /* só apagar */
+    display: block; /* none */
     text-align: center;
     font-size: 3em;
     margin-bottom: 90px;
 }
 
 .container {
-    display: none; /* flex */
+    display: flex; /* flex */
     flex-wrap: wrap;
     justify-content: center; 
 }
@@ -54,7 +54,7 @@ body {
 /* combate */
 
 #combate {
-    display: flex;
+    display: none; /* flex */
     height: 99.7vh;
     width: 99.8535%;
     align-items: center;
@@ -85,16 +85,20 @@ body {
 }
 
 .mewtwo-container {
-    display: none;
     position: absolute;
-    top: 0%;
-    left: 10%;
+    top: 20%;
+    left: 55%;
 }
 
 .mewtwo-inimigo {
-    display: none;
-    max-width: 100%;
+    width: 200px;
 }
+
+audio {
+    height: 20px;
+    width: 300px;
+}
+
 
 
 @media screen and (max-width: 480px) {

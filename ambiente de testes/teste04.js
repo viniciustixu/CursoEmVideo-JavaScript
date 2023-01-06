@@ -15,4 +15,5 @@ function clicouBulbasaur() {
     document.querySelector('.container').style.display = 'none'
     document.getElementById('h1-temporario').style.display = 'none'
     var pokemon = 'bulbasaur'
+    document.getElementById('combate').style.display = 'flex'
 }
