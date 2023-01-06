@@ -4,6 +4,7 @@ document.querySelector('.pokemon-quadro:nth-child(3)').addEventListener('click',
 document.getElementById('atk').addEventListener('click', clicouAtaque)
 var pokemon = ''
 var audioPrincipal = document.getElementById("musicaCombate");
+var pokemonSfx = document.getElementById("pokemon-sfx");
 
 function clicouCharmander() {
     document.body.style.display = 'none'
@@ -26,7 +27,7 @@ function clicouBulbasaur() {
 function clicouSquirtle() {
     document.querySelector('.container').style.display = 'none'
     document.getElementById('h1-temporario').style.display = 'none'
-    var pokemon = 'squirtle'
+    pokemon = 'squirtle';
     document.getElementById('combate').style.display = 'flex'
     document.querySelector('.pokemon-de-costas').src = '../imagens/squirtle-back.png';
     document.querySelector('.pokemon-de-costas').style.transform = 'scaleX(-1)';
@@ -48,5 +49,7 @@ function clicouCharmander() {
 
 /* UI */
 function clicouAtaque() {
-    document.getElementById('atk').innerText = 'Atacou'
+    if (pokemon = 'bulbasaur') {
+        document.getElementById('atk').innerText = `${pokemon}`
+    }
 }
