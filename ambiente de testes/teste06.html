@@ -49,6 +49,13 @@
             margin-top: 50px;
             font-size: 1.4em;
         }
+
+        .limpar {
+            display: flex;
+            justify-content: center;
+            margin: 50px auto 0 auto;
+            width: 100px;
+        }
     </style>
     <title>Testes com Switch</title>
 </head>
@@ -70,12 +77,22 @@
 
     <div class="container-confirma">
         <div class="confirmacao">
-            <input type="button" value="Confirmar" onclick="clicouConfirmar()">
+            <input type="button" value=" Confirmar (if) " onclick="clicouConfirmar()">
+        </div>
+    </div>
+
+    <div class="container-confirma">
+        <div class="confirmacao">
+            <input type="button" value=" Confirmar (switch) " onclick="clicouConfirmarSwitch()">
         </div>
     </div>
 
     <div class="resultado">
         <p>Aqui vai o resultado</p>
+    </div>
+
+    <div class="limpar">
+        <input type="button" value=" Limpar " onclick="limpar()">
     </div>
 </body>
 
@@ -99,6 +116,12 @@
         cor = 'cinza'
     }
 
+    function limpar() {
+        cor = ''
+        document.querySelector('div.resultado').innerText = 'Aqui vai o resultado'
+        document.querySelector('div.bola').style.background = 'lightBlue'
+    }
+
     function clicouConfirmar() {
         if (cor == 'cinza') {
             document.querySelector('div.resultado').innerText = 'A cor clicada foi cinza'
@@ -107,7 +130,26 @@
         } else if (cor == 'amarelo') {
             document.querySelector('div.resultado').innerText = 'A cor clicada foi amarelo'
         } else {
-            document.querySelector('div.resultado').innerText = 'Nenhum dos botões foi clicado'
+            document.querySelector('div.resultado').innerText = 'Nenhum dos botões foram clicados'
+        }
+    }
+
+    function clicouConfirmarSwitch() {
+        switch (cor) {
+            case 'amarelo': 
+            document.querySelector('div.resultado').innerText = 'A cor amarela foi clicada'
+            break
+
+            case 'verde': 
+            document.querySelector('div.resultado').innerText = 'A cor verde foi clicada'
+            break
+
+            case 'cinza': 
+            document.querySelector('div.resultado').innerText = 'A cor cinza foi clicada'
+            break
+
+            default: 
+            document.querySelector('div.resultado').innerText = 'Nenhum dos botões acima foram clicados'
         }
     }
 </script>
