@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com função complexa</title>
+</head>
+<body>
+    <div class="resultado">
+
+    </div>
+</body>
+<script>
+    function parImpar(x) {
+        if (x%2 == 0) {
+            return 'Par!'
+        } else {
+            return 'Ímpar'
+        }
+    }
+
+    let res = document.querySelector('div.resultado')
+
+    res.innerHTML = parImpar(222)
+
+</script>
+</html>
