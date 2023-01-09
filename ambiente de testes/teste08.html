@@ -7,11 +7,16 @@
     <title>Teste com função complexa</title>
 </head>
 <body>
+    <input type="number" name="txtnum" id="itxtnum">
+    <input type="button" value="clicar" onclick="clicou()">
     <div class="resultado">
 
     </div>
 </body>
 <script>
+    var res = document.querySelector('div.resultado')
+    
+
     function parImpar(x) {
         if (x%2 == 0) {
             return 'Par!'
@@ -20,9 +25,9 @@
         }
     }
 
-    let res = document.querySelector('div.resultado')
-
-    res.innerHTML = parImpar(222)
-
+    function clicou() {
+        let number = document.getElementById('itxtnum').value
+        res.innerHTML = parImpar(number) 
+    }
 </script>
 </html>
