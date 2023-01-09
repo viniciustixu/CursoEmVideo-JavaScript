@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Fatorial</title>
+</head>
+<body>
+    <h1>Qual número você deseja saber o fatorial?</h1>
+    <input type="number" name="txtnum" id="itxtnum">
+    <input type="button" value="calcular" onclick="clicked()">
+    <div class="resultado">
+
+    </div>
+</body>
+<script>
+    function clicked(n) {
+        n = document.getElementById('itxtnum').value
+        let res = document.querySelector('div.resultado')
+
+        let fat = 1
+        for (let c = n; c > 1; c--) {
+            fat *= c
+        }
+        res.innerHTML = `${fat}`
+    }
+</script>
+</html>
