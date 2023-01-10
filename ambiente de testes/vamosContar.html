@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: green;
+            color: white;
+        }
+
+        h1:nth-child(1) {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            margin: 0 auto;
+            background: white;
+            color: black;
+            max-width: 400px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        main > div {
+            line-height: 1.6em;
+            font-size: 1.4em;
+        }
+    </style>
+    <title>Vamos contar</title>
+</head>
+<body>
+    <h1>Vamos contar</h1>
+    <main>
+        <div class="inicio">
+            <label for="itxtini">Início: </label>
+            <input type="number" name="txtini" id="itxtini">
+        </div>
+        <div class="Fim">
+            <label for="ifim">Fim: </label>
+            <input type="number" name="fim" id="ifim">
+        </div>
+        <div class="Passo">
+            <label for="ipasso">Passo: </label>
+            <input type="number" name="passo" id="ipasso">
+        </div>
+        <div class="contar">
+            <input type="button" value="Contar" id="teste">
+        </div>
+        <div class="resultado">
+            <strong>Aqui vai o resultado: </strong>
+        </div>
+    </main>
+</body>
+<script>
+    document.querySelector('div.contar').addEventListener('click', contar)
+
+    function contar() {
+        let inicio = Number(document.querySelector('input#itxtini').value)
+        let fim = Number(document.querySelector('input#ifim').value)
+        let passo = Number(document.querySelector('input#ipasso').value)
+        let res = document.querySelector('div.resultado')
+        
+
+        if (inicio.length == 0 || fim.length == 0 || passo.length == 0) {
+            res.innerHTML = `[ERRO], confira os dados e tente novamente`
+        } else {
+            res.innerHTML = `<strong>Aqui vai o resultado: </strong>`
+            for (let c = inicio;c <= fim; c += passo) {
+                res.innerHTML += `${c}, `
+            }
+            res.innerHTML += 'fim!'
+        }
+    }
+</script>
+</html>
