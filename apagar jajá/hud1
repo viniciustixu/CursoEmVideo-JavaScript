@@ -22,7 +22,7 @@ class CR4ScriptedHud extends CR4Hud
 {
 	private var m_hudSize					: int;		default m_hudSize = 0;
 	private var m_minimapRotationEnabled	: bool;		default m_minimapRotationEnabled 	= true;
-	private var m_minimapZoom				: float;	default m_minimapZoom 				= 0.5;
+	private var m_minimapZoom				: float;	default m_minimapZoom 				= 0.2;
 	private var m_enabledEnemyFocus			: bool;		default m_enabledEnemyFocus			= true;
 	private var m_enabledNPCNames			: bool;		default m_enabledNPCNames			= true;
 	private var m_enemyHitEffects			: bool;		default m_enemyHitEffects			= true;
