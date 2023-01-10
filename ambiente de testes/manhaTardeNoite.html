@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 94vh;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .texto {
+            margin-top: 50px;
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        .imagem-container {
+            margin-bottom: 80px;
+        }
+
+        #imagem {
+            max-width: 100%;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>Checar horas</title>
+</head>
+
+<body onload="carregou()">
+    <header class="header">
+        <h1>Hora do dia</h1>
+    </header>
+    <main class="main">
+        <div class="texto" id="itexto">
+            Texto vai aqui
+        </div>
+        <div class="imagem-container">
+            <img src="../imagens/manha.jpg" alt="imagem amanhecer" id="imagem">
+        </div>
+    </main>
+    <footer>
+        <p>Created by Tixu</p>
+    </footer>
+</body>
+
+<script>
+    var agora = new Date()
+    var res = document.getElementById('itexto')
+    var foto = document.getElementById('imagem')
+    
+    function carregou() {
+        let hora = agora.getHours()
+
+
+        if (hora >= 12 && hora <= 18) {
+            imagem.src = '../imagens/tarde.jpg'
+            res.innerHTML = `Agora são ${hora} horas, boa tarde!`
+        } else if (hora > 18 && hora <= 24) {
+            imagem.src = '../imagens/noite.jpg'
+            res.innerHTML = `Agora são ${hora} horas, boa tarde!`
+        } else if (hora >= 0 && hora <= 5) {
+            imagem.src = '../imagens/madrugada.jpg'
+            res.innerHTML = `Agora são ${hora} horas, boa tarde!`
+        } else {
+            imagem.src = '../imagens/manha.jpg'
+            res.innerHTML = `Agora são ${hora} horas, boa tarde!`
+        }
+    }
+
+</script>
+</html>
