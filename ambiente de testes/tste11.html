@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: lightgray;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            align-items: center;
+            margin: 0 auto;
+            gap: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+        }
+    </style>
+    <title>Analisar numero</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Analisador de número</h1>
+        <p>1~100</p>
+        <input type="number" name="num" id="inum">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+        <select name="seltab" id="iseltab" size="5"><option>Digite alguns valores acima</option></select>
+        <input type="button" value="Checar" onclick="checar()">
+        <div class="resultado">
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let numeros = []
+    let res = document.querySelector('div.resultado')
+
+
+
+    function adicionar() {
+        let n = document.getElementById('inum')
+        let item = document.createElement('option')
+        let tab = document.getElementById('iseltab')
+
+        if (n.value.length == 0 || n.value > 100 || n.value < 1) {
+            window.alert('Valores inválidos!')
+            n.focus()
+            n.value = ''
+        } else if (numeros.indexOf(n.value) == -1){
+            res.innerHTML = ''
+            numeros.push(n.value)
+            let item = document.createElement('option')
+            item.text = `Numero ${n.value} adicionado!`
+            tab.appendChild(item)
+            n.focus()
+            n.value = ''
+            
+        } else {
+            window.alert('O numero digitado já está presente no array!')
+        }
+    }
+
+    function checar() {
+            numeros.sort(function(a, b) {return a - b;})
+            res.innerHTML = `${numeros}`
+
+        }
+</script>
+</html>
