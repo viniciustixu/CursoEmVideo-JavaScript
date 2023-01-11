@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outra tabuada</title>
+</head>
+<body>
+    <div>
+        <input type="number" name="num" id="inum">
+        <input type="button" value="Calcular" onclick="tabuada()">
+        <select name="tabuada" id="seltab" size="10"></select>
+    </div>
+    <div id="resultado">
+
+    </div>
+</body>
+<script>
+    function tabuada() {
+        let num = document.getElementById('inum')
+        let tab = document.getElementById('seltab')
+        let res = document.getElementById('resultado')
+        if (num.value.length == 0) {
+            res.innerHTML = `[ERRO], confira os dados e tente novamente`
+        } else {
+            
+            res.innerHTML = ''
+            for (let c = 1;c <= 10; c++) {
+                let item = document.createElement('option')
+                item.text = `${num.value} x ${c} = ${num.value*c}`
+                tab.appendChild(item)
+            }
+        }
+    }
+</script>
+</html>

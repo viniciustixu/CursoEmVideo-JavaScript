@@ -22,9 +22,15 @@
         let numero = Number(document.querySelector('input#inumero-tabuada').value)
         let res = document.querySelector('div.resultado')
 
+
+        if (document.getElementById('inumero-tabuada').value.length == 0) {
+            res.innerHTML = `[ERRO] confira os dados e tente novamente`
+        } else {
+            res.innerHTML = ''
         for (let c = 1;c <= 10; c++) {
             res.innerHTML += `${numero} x ${c} = ${numero * c} <br>`
         }
+    }
     }
 </script>
 </html>
