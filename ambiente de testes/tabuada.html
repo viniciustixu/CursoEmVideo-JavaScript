@@ -9,8 +9,22 @@
 <body>
     <h1>Tabuada</h1>
     <main>
-        <select name="tabelinha" id="itabelinha">asdasddsa</select> 
-        <option value="tabelinha">asdasd</option>
+        <label for="inumero-tabuada">Digite um número: </label>
+        <input type="number" name="numero-tabuada" id="inumero-tabuada">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <div class="resultado">
+
+        </div>
     </main>
 </body>
+<script>
+    function calcular() {
+        let numero = Number(document.querySelector('input#inumero-tabuada').value)
+        let res = document.querySelector('div.resultado')
+
+        for (let c = 1;c <= 10; c++) {
+            res.innerHTML += `${numero} x ${c} = ${numero * c} <br>`
+        }
+    }
+</script>
 </html>
