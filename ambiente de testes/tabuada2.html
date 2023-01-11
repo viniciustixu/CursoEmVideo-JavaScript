@@ -10,7 +10,9 @@
     <div>
         <input type="number" name="num" id="inum">
         <input type="button" value="Calcular" onclick="tabuada()">
-        <select name="tabuada" id="seltab" size="10"></select>
+        <select name="tabuada" id="seltab" size="10">
+            <option>Digite um número acima</option>
+        </select>
     </div>
     <div id="resultado">
 
@@ -25,7 +27,7 @@
             res.innerHTML = `[ERRO], confira os dados e tente novamente`
         } else {
             
-            res.innerHTML = ''
+            tab.innerHTML = ''
             for (let c = 1;c <= 10; c++) {
                 let item = document.createElement('option')
                 item.text = `${num.value} x ${c} = ${num.value*c}`
