@@ -13,7 +13,7 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            max-width: 200px;
+            max-width: 300px;
             align-items: center;
             margin: 0 auto;
             gap: 20px;
@@ -69,8 +69,18 @@
 
     function checar() {
             numeros.sort(function(a, b) {return a - b;})
-            res.innerHTML = `${numeros}`
+            let comprimento = Number(numeros.length)
+            let soma = 0
 
+            for (let i = 0;i < comprimento;i++) {
+                soma += Number(numeros[i])
+            }
+
+            res.innerHTML = `Ao todo, temos ${comprimento} numeros <br>
+            O maior valor informado foi ${numeros[comprimento - 1]} <br>
+            O menor valor informado foi ${numeros[0]} <br>
+            Somando todos os valores temos ${soma} <br>
+            A média dos valores digitados é ${soma / comprimento}`
         }
 </script>
 </html>
